@@ -1,4 +1,5 @@
 'use strict';
+var fs = require('fs');
 var http = require('http');
 var url = require('url');
 var validURL = require('valid-url');
@@ -111,6 +112,15 @@ var server = http.createServer(function(req, res) {
             };
                 res.end(JSON.stringify(answer));
             }
+        });
+    }
+    else if (path == '/') {
+        fs.readFile('./index.html', 'binary', function(err, file) {
+            if(err) {
+                res.end(err);
+                throw err;
+            }
+          res.end(file, 'binary');
         });
     }
     else {
