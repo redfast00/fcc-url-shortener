@@ -1,0 +1,16 @@
+{
+  "name": "url-shortener",
+  "version": "0.0.0",
+  "description": "A heroku url-shortener",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^2.1.7",
+    "valid-url": "^1.0.9"
+  }
+}
